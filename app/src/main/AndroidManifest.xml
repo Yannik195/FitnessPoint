@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/fitness_point_launcher"
+        android:icon="@mipmap/fitness_point_launcher_vintage"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/fitness_point_launcher"
+        android:roundIcon="@mipmap/fitness_point_launcher_vintage"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">

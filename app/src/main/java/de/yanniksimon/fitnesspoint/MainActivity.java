@@ -1,15 +1,24 @@
 package de.yanniksimon.fitnesspoint;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import androidx.appcompat.app.AppCompatActivity;
+import de.yanniksimon.fitnesspoint.Helpers.HelperClass;
 
 public class MainActivity extends AppCompatActivity {
 
+    //UI
     FloatingActionButton fab;
+
+    //Database
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +34,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //Todo Reload List
+    }
+
+
 }
