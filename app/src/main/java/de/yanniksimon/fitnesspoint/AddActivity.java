@@ -121,7 +121,6 @@ public class AddActivity extends AppCompatActivity {
                     case "Brust":
                         exerciseSpinner.setAdapter(chestAdapter);
                 }
-
             }
 
             @Override
@@ -139,10 +138,13 @@ public class AddActivity extends AppCompatActivity {
                 Integer.parseInt(repsEditText.getText().toString())
 
         );
+
         DocumentReference reference = db
                 .collection("users")
                 .document("yannik")
-                .collection(getDate())
+                .collection("workouts")
+                .document(getDate())
+                .collection("sets")
                 .document();
 
         reference.set(set).addOnSuccessListener(new OnSuccessListener<Void>() {
